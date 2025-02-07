@@ -54,7 +54,7 @@ Girilen mod değerine göre fare imlecinin durumunu belirler. Temel amacı imle�
 
 **Örnek Kullanım:**
     
-```py
+```GDScript
 extends Node
 
 ## Giriş olaylarını yakalar.
@@ -91,7 +91,7 @@ Mouse hareket ediyorsa göreceli konumunu döndürür, aksi halde `Vector2.ZERO`
 
 **Örnek Kullanım:**
     
-```py
+```GDScript
 extends Node
 
 ## Giriş olaylarını yakalar.
@@ -126,7 +126,7 @@ Fare hareketinin x ve y eksenlerindeki ölçekli hızını döndürür.
 
 **Örnek Kullanım:**
     
-```py
+```GDScript
 extends Node3D
 
 @export var mouse_speed: Vector2 = Vector2(1, 1)  # Denetçi Panelinde görünür.
@@ -174,7 +174,7 @@ X ekseni için ölçekli hız döndürür. Tek bir eksen için hız alınacağı
 
 **Örnek Kullanım:**
     
-```py
+```GDScript
 extends Node3D
 
 @export var mouse_speed_x: float = 1.0  # Denetçi Panelinde görünür.
@@ -222,7 +222,7 @@ senaryolarda daha optimize bir çözüm sunar.
 
 **Örnek Kullanım:**
     
-```py
+```GDScript
 extends Control
 
 

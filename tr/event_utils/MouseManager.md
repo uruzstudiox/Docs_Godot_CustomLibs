@@ -7,7 +7,7 @@ MouseManager, fare ile ilgili işlemleri yönetmek için statik yöntemler sağl
 `extends Script`
 
 **Konum:**\
-`res://libs/event_lib`
+`res://libs/event_utils`
 
 **İçerik:**
 - [Enum Tanımları](#enum-tanımları)
@@ -57,7 +57,7 @@ Girilen mod değerine göre fare imlecinin durumunu belirler. Temel amacı imle�
 ```GDScript
 extends Node
 
-## Giriş olaylarını yakalar.
+
 func _input(event: InputEvent) -> void:
     if event is InputEventMouseButton:
         if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
@@ -94,12 +94,11 @@ Mouse hareket ediyorsa göreceli konumunu döndürür, aksi halde `Vector2.ZERO`
 ```GDScript
 extends Node
 
-## Giriş olaylarını yakalar.
+
 func _input(event: InputEvent) -> void:
     var mouse_delta = MouseManager.get_mouse_delta(event)
 
-    # "LeftClick" tanımlandı: Project/Project Settings/Input Map
-    if Input.is_action_pressed("LeftClick"): 
+    if Input.is_action_pressed("LeftClick"):  # "LeftClick" Input Map'te tanımlanmalı.
         control_with_mouse(mouse_delta, ...)
 
 
@@ -129,15 +128,13 @@ Fare hareketinin x ve y eksenlerindeki ölçekli hızını döndürür.
 ```GDScript
 extends Node3D
 
-@export var mouse_speed: Vector2 = Vector2(1, 1)  # Denetçi Panelinde görünür.
+@export var mouse_speed: Vector2 = Vector2(1, 1)
 
-## Kullanıcı arayüzü ve başka bir düğüm tarafından işlenmeyen giriş
-## olaylarını yakalar.
+
 func _unhandled_input(event: InputEvent) -> void:
     var mouse_delta: Vector2 = MouseManager.get_mouse_delta(event)
 
-    # "LeftClick" tanımlandı: Project/Project Settings/Input Map
-    if Input.is_action_pressed("LeftClick"):
+    if Input.is_action_pressed("LeftClick"):  # "LeftClick" Input Map'te tanımlanmalı.
         rotate_node_manually(mouse_delta)
 
 
@@ -162,7 +159,8 @@ func rotate_node_manually(mouse_delta: Vector2)
 ### mouse_speed_x (`float`), `static`
 
 **Tanım:**
-X ekseni için ölçekli hız döndürür. Tek bir eksen için hız alınacağı senaryolarda daha optimize bir çözüm sunar.
+X eksenindeki fare hızını ölçekleyerek döndürür.
+Tek eksen hareketi için optimize edilmiştir.
 
 **Parametreler:**
 - mouse_delta (`Vector2`): Fare hareketinin ham değeri.
@@ -177,15 +175,13 @@ X ekseni için ölçekli hız döndürür. Tek bir eksen için hız alınacağı
 ```GDScript
 extends Node3D
 
-@export var mouse_speed_x: float = 1.0  # Denetçi Panelinde görünür.
+@export var mouse_speed_x: float = 1.0
 
-## Kullanıcı arayüzü ve başka bir düğüm tarafından işlenmeyen giriş
-## olaylarını yakalar.
+
 func _unhandled_input(event: InputEvent) -> void:
     var mouse_delta: Vector2 = MouseManager.get_mouse_delta(event)
 
-    # "LeftClick" tanımlandı: Project/Project Settings/Input Map
-    if Input.is_action_pressed("LeftClick"):
+    if Input.is_action_pressed("LeftClick"):  # "LeftClick" Input Map'te tanımlanmalı.
         rotate_node_manually(mouse_delta)
 
 
@@ -209,8 +205,8 @@ func rotate_node_manually(mouse_delta: Vector2)
 ### mouse_speed_y (`float`), `static`
 
 **Tanım:**\
-Y ekseni için ölçekli hız döndürür. Tek bir eksen için hız alınacağı          
-senaryolarda daha optimize bir çözüm sunar.
+Y eksenindeki fare hızını ölçekleyerek döndürür.
+Tek eksen hareketi için optimize edilmiştir.
 
 **Parametreler:**
 - mouse_delta (`Vector2`): Fare hareketinin ham değeri.
@@ -226,13 +222,10 @@ senaryolarda daha optimize bir çözüm sunar.
 extends Control
 
 
-## Bu metodun temel amacı, ilgili UI öğesi üzerindeki giriş olaylarını
-## yakalamak ve işlemektir. Başka giriş olayları veya alttaki 
-## nesneler tarafından yanlışlıkla işlenmez.
 func _gui_input(event: InputEvent) -> void:
     var mouse_delta: Vector2 = MouseManager.get_mouse_delta(event)
 
-    if Input.is_action_pressed("RightClick"):
+    if Input.is_action_pressed("RightClick"):  # "RightClick" Input Map'te tanımlanmalı.
         adjust_vertical_movement(mouse_delta)
 
 

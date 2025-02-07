@@ -11,14 +11,14 @@ MouseManager, fare ile ilgili işlemleri yönetmek için statik yöntemler sağl
 
 **İçerik:**
 - [Enum Tanımları](#enum-tanımları)
-    1 [MouseMode](#mousemode)
+    1. [MouseMode](#mousemode)
 - [Değişken Tanımları](#değişken-tanımları)
 - [Yöntemler](#yöntemler)
-    1 [mouse_mode (void)](#mouse_mode-void-static)
-    2 [get_mouse_delta (Vector2)](#get_mouse_delta-vector2-static)
-    3 [mouse_speed (Vector2)](#mouse_speed-vector2-static)
-    4 [mouse_speed_x (float)](#mouse_speed_x-float-static)
-    5 [mouse_speed_y (float)](#mouse_speed_y-float-static)
+    1. [mouse_mode (void)](#mouse_mode-void-static)
+    2. [get_mouse_delta (Vector2)](#get_mouse_delta-vector2-static)
+    3. [mouse_speed (Vector2)](#mouse_speed-vector2-static)
+    4. [mouse_speed_x (float)](#mouse_speed_x-float-static)
+    5. [mouse_speed_y (float)](#mouse_speed_y-float-static)
 
 ## Enum Tanımları
 

@@ -236,8 +236,8 @@ func _gui_input(event: InputEvent) -> void:
         adjust_vertical_movement(mouse_delta)
 
 
-## Bu fonksiyon, verilen fare hareketi değerine göre bu düğümün dikey konumunu
-## ayarlar.
+## Bu fonksiyon, verilen fare hareketi değerine göre bu düğümün dikey
+## konumunu ayarlar.
 func adjust_vertical_movement(mouse_delta: Vector2) -> Void:
     # Varsayılan değerler (speed: 0.5, speed_multiplier: 0.001) kullanılarak
     # ölçeklenmiş y hızını alıyoruz.

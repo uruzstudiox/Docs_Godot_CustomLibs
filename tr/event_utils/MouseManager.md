@@ -54,7 +54,7 @@ Girilen mod değerine göre fare imlecinin durumunu belirler. Temel amacı imle�
 
 **Örnek Kullanım:**
     
-```py
+```GDScript
 extends Node
 
 ## Giriş olaylarını yakalar.

@@ -105,7 +105,7 @@ func _input(event: InputEvent) -> void:
 func control_with_mouse(mouse_delta: vector2, ...) -> void:
     ...
 ```
-**Örneğe ait notlar:**
+**Örneğe Ait Notlar:**
 - "`LeftClick`" Input Map'te tanımlanmalı.
 
 **[Başlığa Dön](#mousemanager-sınıfı)**
@@ -151,7 +151,7 @@ func rotate_node_manually(mouse_delta: Vector2)
     rotation.y -= scaled_speed.x
     rotation.x -= scaled_speed.y
 ```
-**Örneğe ait notlar:** 
+**Örneğe Ait Notlar:** 
 - "`LeftClick`" Input Map'te tanımlanmalı.
 - Varsayılan değer (`speed_multiplier` = `0.001`) kullanarak ölçeklenmiş x ve y
 hızını alıyoruz.
@@ -199,7 +199,7 @@ func rotate_node_manually(mouse_delta: Vector2)
 
     rotation.y -= scaled_speed_x
 ```
-**Örneğe ait notlar:**
+**Örneğe Ait Notlar:**
 - "`LeftClick`" Input Map'te tanımlanmalı.
 - Varsayılan değer (`speed_multiplier` = `0.001`) kullanarak ölçeklenmiş y 
 hızını alıyoruz.
@@ -242,7 +242,7 @@ func adjust_vertical_movement(mouse_delta: Vector2) -> Void:
 
     rect_position.y += scaled_speed_y
 ```
-**Örneğe ait notlar:**
+**Örneğe Ait Notlar:**
 - "`RightClick`" Input Map'te tanımlanmalı.
 - Varsayılan değerler (`speed` = `0.5`, `speed_multiplier` = `0.001`)
 kullanarak ölçeklenmiş y hızını alıyoruz.

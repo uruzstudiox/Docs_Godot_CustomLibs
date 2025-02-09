@@ -1,7 +1,7 @@
 # Movement3D Sınıfı
 
 **Tanım**\
-`Movement3D`, 3D sahnelerde temel hareket mekanizmasını sağlayan bir sınıftır.
+`Movement3D`, 3D sahnelerde temel hareket mekanizmasını sağlayan en temel düğümdür.
 
 **Temel Alınır**\
 `extends Node3D`
@@ -62,7 +62,7 @@ extends Node3D
 func _ready() -> void:
     movement_node.start_movement()  # Hareket düğümü için hareketi başlatır.
 ```
-**Örneğe ait notlar:**
+**Örneğe Ait Notlar:**
 - `movement_node` nesnesi bir Movement3D örneği olmalıdır ve sahnede atanmalıdır.
 
 **[Başlığa Dön](#movement3d-sınıfı)**

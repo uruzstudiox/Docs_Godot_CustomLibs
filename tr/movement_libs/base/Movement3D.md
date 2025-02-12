@@ -31,7 +31,7 @@
 | **Değişken Adı**   | **Değişken Tipi**   | **Varsayılan Değer** | **Açıklama** |
 |--------------------|---------------------|----------------------|----------------------|
 | `is_moving`        | `bool`              | `false`              | Hareketin açık olup olmadığını belirler. |
-| `movement_speed`   | `Vector3`           | `Vector3.ZERO`       | Hareket yönünü ve hızını belirler. |
+| `movement_speed`   | `Vector3`           | `Vector3.ZERO`       | Hareket yönünü ve miktarını (hızını) belirler. |
 | `reverse_speed_x`  | `bool`              | `false`              | X eksenindeki hareket yönünü tersine çevirir. |
 | `reverse_speed_y`  | `bool`              | `false`              | Y eksenindeki hareket yönünü tersine çevirir. |
 | `reverse_speed_z`  | `bool`              | `false`              | Z eksenindeki hareket yönünü tersine çevirir. |
